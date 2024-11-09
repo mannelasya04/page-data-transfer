@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Parameters</title>
+    <script>
+        function displayParams() {
+            // Get the URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get("username");
+            const password = params.get("password");
+
+            // Display the parameters
+            document.getElementById("usernameDisplay").textContent = username;
+            document.getElementById("passwordDisplay").textContent = password;
+        }
+    </script>
+</head>
+<body onload="displayParams()">
+    <h2>Accepted Data</h2>
+    <p>User Name: <span id="usernameDisplay"></span></p>
+    <p>Password: <span id="passwordDisplay"></span></p>
+</body>
+</html>
